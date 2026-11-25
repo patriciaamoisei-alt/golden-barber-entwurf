@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Golden Barber – Men's Salon in Geretsried | Termin online buchen</title>
+<meta name="description" content="Barbershop in Geretsried: exakte Fades, klassische Rasuren und Bartstyling. Wähle deinen Barber und buche deinen Termin online – rund um die Uhr, sofort bestätigt.">
+<meta name="theme-color" content="#0a0a0b">
+<!-- Entwurf: vor dem Livegang entfernen -->
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://thegoldenbarber.de/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:title" content="The Golden Barber – Men's Salon in Geretsried">
+<meta property="og:description" content="Stil beginnt im Barberstuhl. Termin online buchen – rund um die Uhr.">
+<meta property="og:image" content="https://patriciaamoisei-alt.github.io/golden-barber-entwurf/assets/img/chair.jpg">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/BodoniModa-normal-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/BodoniModa-italic-400-900.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="assets/img/salon-main.jpg" fetchpriority="high">
+<script>
+(function () {
+  var c = document.documentElement.classList, q = new URLSearchParams(location.search), seen = false;
+  c.add("js");
+  if (q.get("variante") === "a") c.add("var-a");
+  try { seen = sessionStorage.getItem("gb_intro") === "1"; } catch (e) {}
+  // Logo-Intro: einmal pro Besuch, nicht bei Sprunglinks und nicht bei "Bewegung reduzieren"
+  if ((!seen || q.has("intro")) && !location.hash && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    c.add("intro-on", "intro-lock");
+    try { sessionStorage.setItem("gb_intro", "1"); } catch (e) {}
+    setTimeout(function () { c.remove("intro-lock"); }, 2300);
+    setTimeout(function () { c.add("intro-done"); }, 3200);
+  }
+})();
+</script>
+<link rel="preload" as="image" href="assets/img/logo-mask.png" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarberShop",
+  "name": "The Golden Barber – Men's Salon",
+  "image": "https://thegoldenbarber.de/assets/img/chair.jpg",
+  "url": "https://thegoldenbarber.de/",
+  "telephone": "+4915206021380",
+  "priceRange": "€€",
+  "address": { "@type": "PostalAddress", "streetAddress": "Egerlandstraße 3", "postalCode": "82538", "addressLocality": "Geretsried", "addressRegion": "BY", "addressCountry": "DE" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "12:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/golden.barber.remus/", "https://www.tiktok.com/@thegoldenbarber.bayern"],
+  "potentialAction": { "@type": "ReserveAction", "target": "https://thegoldenbarber.de/#termin", "name": "Termin buchen" }
+}
+</script>
+</head>
+<body>
+<div class="intro" aria-hidden="true">
+  <div class="intro__spots"></div>
+  <div class="intro__logo"></div>
+  <i class="intro__line"></i>
+</div>
+<a class="skip" href="#termin">Direkt zur Terminbuchung</a>
+
+<nav class="nav" id="nav" aria-label="Hauptnavigation">
+  <a class="brand" href="#top" aria-label="The Golden Barber – Startseite">
+    <span class="brand__mark" aria-hidden="true"></span><span class="brand__word" aria-hidden="true"></span>
+  </a>
+  <div class="nav__links" id="navLinks">
+    <a href="#leistungen">Leistungen</a>
+    <a href="#team">Team</a>
+    <a href="#salon">Salon</a>
+    <a href="#bewertungen">Bewertungen</a>
+    <a href="#kontakt">Kontakt</a>
+  </div>
+  <a class="btn btn--line btn--sm nav__call" href="tel:+4915206021380" aria-label="Anrufen: 01520 6021380" title="01520 6021380"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg><span>Anrufen</span></a>
+  <a class="btn btn--gold btn--sm nav__cta" href="#termin" data-book>Termin buchen</a>
+  <button class="nav__burger" id="burger" aria-expanded="false" aria-controls="navLinks" aria-label="Menü öffnen"><span></span><span></span></button>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero__photo" aria-hidden="true"><img src="assets/img/salon-main.jpg" alt="" width="1800" height="1350"></div>
+  <svg class="hero__led" id="led" viewBox="0 0 760 360" aria-hidden="true"></svg>
+  <canvas class="hero__dust" id="dust" aria-hidden="true"></canvas>
+  <div class="hero__shade" aria-hidden="true"></div>
+
+  <div class="hero__grid wrap">
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow"><span class="live" id="openDot"></span><span id="openText">Men's Salon · Geretsried</span></p>
+      <h1 class="hero__title">
+        <span class="mask"><span>Stil beginnt</span></span>
+        <span class="mask"><span><em class="gold">im Barberstuhl.</em></span></span>
+      </h1>
+      <p class="hero__lede">Exakte Fades, klassische Rasuren und Bartstyling mit Blick fürs Detail. Such dir deinen Barber aus und buch deinen Termin in unter einer Minute.</p>
+      <div class="hero__cta">
+        <a class="btn btn--gold" href="#termin" data-book>Termin buchen</a>
+        <a class="btn btn--line" href="#leistungen">Preise ansehen</a>
+      </div>
+    </div>
+
+    <aside class="nextfree oct" aria-labelledby="nfTitle">
+      <div class="nextfree__in">
+        <p class="eyebrow" id="nfTitle"><span class="live live--on"></span><span id="nfLabel">Nächste freie Termine</span></p>
+        <ul class="nextfree__list" id="nextFree"></ul>
+        <p class="nextfree__hint" id="nfHint">Uhrzeit antippen – der Platz ist für dich vorgemerkt.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="facts wrap" role="list">
+    <div class="fact" role="listitem"><span class="fact__num">5,0<i>★</i></span><span class="fact__lbl">Google · 140 Bewertungen</span></div>
+    <div class="fact" role="listitem"><span class="fact__num">4,9<i>★</i></span><span class="fact__lbl">Planity · 127 Bewertungen</span></div>
+    <div class="fact" role="listitem"><span class="fact__num">Mo–Sa</span><span class="fact__lbl">geöffnet · online buchbar 24/7</span></div>
+    <div class="fact" role="listitem"><span class="fact__num">82538</span><span class="fact__lbl">Egerlandstraße 3 · Geretsried</span></div>
+  </div>
+</header>
+
+<main>
+  <!-- ============ LEISTUNGEN ============ -->
+  <section class="sec menu" id="leistungen">
+    <div class="wrap menu__grid">
+      <div class="menu__aside">
+        <p class="eyebrow" data-reveal>Leistungen &amp; Preise</p>
+        <h2 class="h2" data-reveal>Neun Leistungen. <em class="gold">Ein Anspruch.</em></h2>
+        <p class="lead" data-reveal>Jede Zeile ist buchbar. Tippe auf eine Leistung und such dir danach Barber und Uhrzeit aus.</p>
+        <figure class="frame frame--tall" data-reveal="curtain">
+          <img src="assets/img/chair.jpg" alt="Goldener Barberstuhl mit dem Logo von The Golden Barber vor einem barocken Spiegel" loading="lazy" width="1600" height="1268" data-parallax="0.08">
+        </figure>
+      </div>
+      <div class="menu__list" id="menuList"></div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section class="sec team" id="team">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="eyebrow" data-reveal>Das Team</p>
+        <h2 class="h2" data-reveal>Vier Profis. <em class="gold">Vier Kalender.</em></h2>
+        <p class="lead" data-reveal>Jeder im Team führt seinen eigenen Kalender. Du siehst sofort, wer wann frei ist, und buchst genau den Barber, dem du vertraust.</p>
+      </header>
+      <div class="team__grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <!-- ============ SALON ============ -->
+  <section class="salon" id="salon" aria-labelledby="salonTitle">
+    <div class="salon__pin">
+      <header class="salon__head wrap">
+        <p class="eyebrow">Der Salon</p>
+        <h2 class="h2" id="salonTitle">Mehr als ein Haarschnitt. <em class="gold">Ein Statement.</em></h2>
+      </header>
+      <div class="salon__track" id="salonTrack">
+        <figure class="shot shot--wide">
+          <div class="frame"><img src="assets/img/salon-main.jpg" alt="Innenraum des Salons mit goldenen Barockspiegeln, schwarzer Wand und drei goldenen Barberstühlen" loading="lazy" width="1800" height="1350"></div>
+          <figcaption><b>Goldene Spiegel, schwarze Wände</b><span>Jeder Platz mit eigenem Spiegel und voller Aufmerksamkeit für dich.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/img/chair.jpg" alt="Zwei goldene Barberstühle vor dem Wandlogo" loading="lazy" width="1600" height="1268"></div>
+          <figcaption><b>Stühle wie Throne</b><span>Zurücklehnen. Der Rest ist unsere Arbeit.</span></figcaption>
+        </figure>
+        <figure class="shot shot--wide">
+          <div class="frame"><img src="assets/img/lounge.jpg" alt="Wartebereich mit grünen Chesterfield-Sofas und Glastisch" loading="lazy" width="1600" height="1064"></div>
+          <figcaption><b>Die Lounge</b><span>Chesterfield-Leder für die Minuten vor deinem Termin.</span></figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame"><img src="assets/img/logo-wall.jpg" alt="Goldenes Wandlogo: Totenkopf mit Krone und Schriftzug The Golden Barber Men's Salon" loading="lazy" width="1600" height="1109"></div>
+          <figcaption><b>Das Zeichen</b><span>Krone, Schädel, Gold. Seit 2023 in Geretsried.</span></figcaption>
+        </figure>
+        <div class="shot shot--cta">
+          <p class="h3">Dein Platz ist frei.</p>
+          <a class="btn btn--gold" href="#termin" data-book>Termin buchen</a>
+        </div>
+      </div>
+      <div class="salon__bar" aria-hidden="true"><i id="salonBar"></i></div>
+    </div>
+  </section>
+
+  <!-- ============ HANDWERK (Video) ============ -->
+  <section class="craft" id="handwerk" aria-labelledby="craftTitle">
+    <div class="craft__media" aria-hidden="true">
+      <video class="craft__video" id="craftVideo" muted loop playsinline preload="none" poster="assets/video/fade-poster.jpg?v=2" data-src="assets/video/fade.mp4?v=2"></video>
+    </div>
+    <div class="craft__shade" aria-hidden="true"></div>
+    <div class="wrap craft__in">
+      <p class="eyebrow" data-reveal>Das Handwerk</p>
+      <h2 class="h2" id="craftTitle" data-reveal>Jeder Schnitt. <em class="gold">Millimeterarbeit.</em></h2>
+      <p class="lead" data-reveal>Vom ersten Aufsatz bis zur letzten Kontur: Wir nehmen uns die Zeit, die ein sauberer Übergang braucht.</p>
+      <a class="btn btn--gold" href="#termin" data-book data-reveal>Termin buchen</a>
+    </div>
+    <div class="wrap craft__foot">
+      <button class="craft__toggle" id="craftToggle" type="button" aria-pressed="false" hidden>Video anhalten</button>
+      <p class="craft__note">Beispielvideo (KI-generiert) · wird durch eine echte Aufnahme aus dem Salon ersetzt</p>
+    </div>
+  </section>
+
+  <!-- ============ BUCHUNG ============ -->
+  <section class="sec book" id="termin" aria-labelledby="bookTitle">
+    <div class="wrap">
+      <header class="sec__head sec__head--center">
+        <p class="eyebrow" data-reveal>Online-Termin</p>
+        <h2 class="h2" id="bookTitle" data-reveal>Dein Termin. <em class="gold nb">In vier Schritten.</em></h2>
+        <p class="lead" id="bookLead" data-reveal>Rund um die Uhr buchbar, sofort bestätigt. Bezahlt wird im Salon.</p>
+      </header>
+      <div class="booking oct" data-reveal>
+        <div class="booking__in" id="booking" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEWERTUNGEN ============ -->
+  <section class="sec rev" id="bewertungen">
+    <div class="wrap rev__grid">
+      <div>
+        <p class="eyebrow" data-reveal>Bewertungen</p>
+        <h2 class="h2" data-reveal>Ausgezeichnet bewertet. <em class="gold">5,0 Sterne bei Google.</em></h2>
+        <p class="lead" data-reveal>140 Bewertungen bei Google, 127 bei Planity. Lies selbst nach, was Kunden über ihren Besuch schreiben.</p>
+        <a class="btn btn--line" data-reveal href="https://www.google.com/search?q=The+Golden+Barber+Men%27s+Salon+Geretsried+Bewertungen" target="_blank" rel="noopener">Bewertungen bei Google lesen</a>
+      </div>
+      <div class="rev__cards">
+        <article class="score oct" data-reveal>
+          <div class="score__in">
+            <p class="score__src">Google</p>
+            <p class="score__num"><span data-count="5.0">5,0</span></p>
+            <p class="stars" aria-label="5 von 5 Sternen">★★★★★</p>
+            <p class="score__sub">aus 140 Bewertungen</p>
+            <p class="score__date">Stand: 25. November 2026</p>
+          </div>
+        </article>
+        <article class="score oct" data-reveal>
+          <div class="score__in">
+            <p class="score__src">Planity</p>
+            <p class="score__num"><span data-count="4.9">4,9</span></p>
+            <p class="score__sub">aus 127 Bewertungen</p>
+            <dl class="bars">
+              <div><dt>Empfang</dt><dd><i style="--v:.98"></i><b>4,9</b></dd></div>
+              <div><dt>Sauberkeit</dt><dd><i style="--v:1"></i><b>5,0</b></dd></div>
+              <div><dt>Ambiente</dt><dd><i style="--v:.98"></i><b>4,9</b></dd></div>
+              <div><dt>Qualität</dt><dd><i style="--v:.98"></i><b>4,9</b></dd></div>
+            </dl>
+            <p class="score__date">Stand: 25. November 2026</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ KONTAKT ============ -->
+  <section class="sec contact" id="kontakt">
+    <div class="wrap contact__grid">
+      <div class="contact__info">
+        <p class="eyebrow" data-reveal>Anfahrt &amp; Zeiten</p>
+        <h2 class="h2" data-reveal>Egerlandstraße&nbsp;3. <em class="gold">Geretsried.</em></h2>
+        <address class="contact__addr" data-reveal>
+          The Golden Barber – Men's Salon<br>Egerlandstraße 3<br>82538 Geretsried
+        </address>
+        <div class="contact__actions" data-reveal>
+          <a class="btn btn--line" href="tel:+4915206021380">01520 6021380</a>
+          <a class="btn btn--line" href="https://www.google.com/maps/dir/?api=1&destination=Egerlandstra%C3%9Fe+3%2C+82538+Geretsried" target="_blank" rel="noopener">Route planen</a>
+        </div>
+        <table class="hours" data-reveal>
+          <caption class="eyebrow">Öffnungszeiten <span id="hoursState"></span></caption>
+          <tbody id="hoursBody"></tbody>
+        </table>
+      </div>
+      <div class="map oct" data-reveal="curtain">
+        <div class="map__in" id="map">
+          <div class="map__ph">
+            <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+            <p class="h3">Egerlandstraße 3</p>
+            <p class="map__txt">Die Karte kommt von Google Maps. Beim Laden werden Daten an Google übertragen – mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+            <button class="btn btn--gold btn--sm" id="mapLoad" type="button">Karte laden</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__grid">
+    <div>
+      <span class="foot__logo" role="img" aria-label="The Golden Barber – Men's Salon"></span>
+      <p class="foot__claim">Egerlandstraße 3 · 82538 Geretsried</p>
+    </div>
+    <nav aria-label="Social Media" class="foot__col">
+      <a href="https://www.instagram.com/golden.barber.remus/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@thegoldenbarber.bayern" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.google.com/search?q=The+Golden+Barber+Men%27s+Salon+Geretsried" target="_blank" rel="noopener">Google</a>
+    </nav>
+    <nav aria-label="Rechtliches" class="foot__col">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="team.html">Team-Login</a>
+    </nav>
+  </div>
+  <p class="wrap foot__legal">© 2026 The Golden Barber – Men's Salon</p>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn btn--gold" href="#termin" data-book>Termin buchen</a>
+  <a class="dock__call" href="tel:+4915206021380" aria-label="Im Salon anrufen"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.2 15.2 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1Z"/></svg></a>
+</div>
+
+<div class="demo" title="Nur in der Präsentation sichtbar">
+  <span class="demo__tag">Demo</span>
+  <a href="index.html?variante=a#termin" data-var="a">A · Planity</a>
+  <a href="index.html#termin" data-var="b">B · Eigener Kalender</a>
+  <a class="demo__team" href="team.html">Team-Kalender →</a>
+</div>
+
+<script type="module" src="assets/js/site.js"></script>
+<script type="module" src="assets/js/booking.js"></script>
+</body>
+</html>

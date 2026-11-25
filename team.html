@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Team-Kalender · The Golden Barber</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0a0a0b">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/team.css">
+</head>
+<body class="tk">
+<header class="tk-top">
+  <a class="brand" href="index.html" aria-label="Zur Website">
+    <span class="brand__mark" aria-hidden="true"></span><span class="brand__word" aria-hidden="true"></span>
+  </a>
+  <span class="tk-badge">Team-Kalender · Demo</span>
+  <a class="tk-toplink" href="index.html">← Zur Website</a>
+</header>
+
+<main class="tk-main">
+  <section class="tk-bar" aria-label="Kalender steuern">
+    <div class="tk-date">
+      <button class="tk-ico" id="prev" type="button" aria-label="Vorheriger Tag">←</button>
+      <button class="tk-today" id="today" type="button">Heute</button>
+      <button class="tk-ico" id="next" type="button" aria-label="Nächster Tag">→</button>
+      <h1 class="tk-title" id="dateTitle" aria-live="polite"></h1>
+    </div>
+    <div class="tk-tabs" id="tabs" role="tablist" aria-label="Kalender wählen"></div>
+    <button class="btn btn--line btn--sm" id="blockBtn" type="button">Zeit blocken</button>
+  </section>
+
+  <section class="tk-kpis" id="kpis" aria-label="Kennzahlen des Tages"></section>
+
+  <div class="tk-grid">
+    <section class="tk-cal oct" aria-label="Tageskalender">
+      <div class="tk-cal__in" id="cal"></div>
+    </section>
+
+    <aside class="tk-side">
+      <div class="tk-panel oct">
+        <div class="tk-panel__in">
+          <p class="eyebrow">Automatische Nachrichten</p>
+          <p class="tk-panel__sub">Was das System ohne euer Zutun verschickt. Buche auf der Website einen Termin und sieh hier zu.</p>
+          <ul class="tk-log" id="log"></ul>
+        </div>
+      </div>
+      <div class="tk-legend">
+        <span><i class="lg lg--on"></i>Online gebucht</span>
+        <span><i class="lg lg--tel"></i>Telefon / Laden</span>
+        <span><i class="lg lg--new"></i>Neu über die Website</span>
+        <span><i class="lg lg--blk"></i>Blockiert</span>
+      </div>
+      <button class="bk-link" id="reset" type="button">Demo zurücksetzen</button>
+    </aside>
+  </div>
+</main>
+
+<dialog class="tk-dlg" id="detail" aria-labelledby="dTitle"><div class="tk-dlg__in" id="detailIn"></div></dialog>
+
+<dialog class="tk-dlg" id="blockDlg" aria-labelledby="bTitle">
+  <form class="tk-dlg__in" id="blockForm" method="dialog">
+    <h2 class="bk-title" id="bTitle">Zeit blocken</h2>
+    <p class="bk-sub">Pause, Urlaub oder Arzttermin: In dieser Zeit kann niemand online buchen.</p>
+    <div class="bk-form" style="grid-template-columns:1fr 1fr">
+      <div class="fld fld--full"><label for="bWho">Für wen</label><select id="bWho" name="who"></select></div>
+      <div class="fld"><label for="bFrom">Von</label><select id="bFrom" name="from"></select></div>
+      <div class="fld"><label for="bDur">Dauer</label><select id="bDur" name="dur">
+        <option value="30">30 Minuten</option><option value="60" selected>1 Stunde</option><option value="120">2 Stunden</option><option value="240">4 Stunden</option><option value="600">Ganzer Tag</option></select></div>
+      <div class="fld fld--full"><label for="bWhy">Grund (nur intern sichtbar)</label><input id="bWhy" name="why" type="text" placeholder="Mittagspause" autocomplete="off"></div>
+    </div>
+    <div class="bk-nav"><button class="bk-back" type="button" data-close>Abbrechen</button><button class="btn btn--gold" type="submit">Zeit blocken</button></div>
+  </form>
+</dialog>
+
+<script type="module" src="assets/js/team.js"></script>
+</body>
+</html>
