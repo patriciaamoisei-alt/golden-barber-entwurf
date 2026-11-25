@@ -153,10 +153,12 @@ export function planNotifications(b, now = new Date()) {
 
   const dayBefore = new Date(start.getTime() - 24 * 36e5);
   const twoHours = new Date(start.getTime() - 2 * 36e5);
+  // zwei Erinnerungen: am Vortag (Zeit zum Absagen) und kurz vorher (gegen Vergessen)
   if (dayBefore > now) {
     add({ type: "reminder", to: "kunde", toName: b.name, channel: chan, at: dayBefore.getTime(), label: "24 Std. vorher", text: `Erinnerung: Morgen um ${time} Uhr ist dein Termin bei ${barber.name}. Passt es nicht mehr? Bitte kurz absagen: ${link}` });
-  } else if (twoHours > now) {
-    add({ type: "reminder", to: "kunde", toName: b.name, channel: chan, at: twoHours.getTime(), label: "2 Std. vorher", text: `Erinnerung: Heute um ${time} Uhr ist dein Termin bei ${barber.name}. Passt es nicht mehr? Bitte kurz absagen: ${link}` });
+  }
+  if (twoHours > now) {
+    add({ type: "reminder2h", to: "kunde", toName: b.name, channel: chan, at: twoHours.getTime(), label: "2 Std. vorher", text: `Bis gleich, ${first}! Heute um ${time} Uhr bei ${barber.name}, ${SALON.street}.` });
   }
   const morning = fromKey(b.date);
   morning.setHours(8, 0, 0, 0);

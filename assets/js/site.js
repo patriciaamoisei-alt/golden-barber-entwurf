@@ -111,7 +111,8 @@ function nav() {
     (es) => es.forEach((e) => e.isIntersecting && map.forEach((a, id) => a.classList.toggle("is-active", id === e.target.id))),
     { rootMargin: "-45% 0px -50% 0px" }
   );
-  map.forEach((_, id) => $("#" + id) && io.observe($("#" + id)));
+  // alle Abschnitte beobachten, damit z. B. im Buchungsbereich kein Menüpunkt fälschlich aktiv bleibt
+  $$("section[id], header[id]").forEach((s) => io.observe(s));
 
   // Mobile-Leiste: sichtbar nach dem Hero, weg sobald die Buchung im Bild ist
   const dock = $("#dock");
